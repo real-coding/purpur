@@ -17,7 +17,7 @@
 **Скачивание репозитория и установка параметров юзера**
 
 1. В терминале переходим в папку ,куда хотим поставить проект
-2. Вводим ```git@github.com:real-coding/purpur.git```
+2. Вводим ```git clone git@github.com:real-coding/purpur.git```
 3. Переходим в проект ```cd purpur```
 4. ```git config user.name "<Ваше имя как в smartprogress>"```
 5. ```git config user.email <Email с которым регались на github>```
