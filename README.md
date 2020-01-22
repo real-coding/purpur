@@ -12,6 +12,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/plxel"><img src="https://avatars0.githubusercontent.com/u/1496959?v=4" width="100px;" alt=""/><br /><sub><b>Alexey Mikhaylov</b></sub></a><br /><a href="#ideas-plxel" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-plxel" title="Maintenance">🚧</a> <a href="https://github.com/real-coding/purpur/pulls?q=is%3Apr+reviewed-by%3Aplxel" title="Reviewed Pull Requests">👀</a> <a href="#design-plxel" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/webnikler"><img src="https://avatars2.githubusercontent.com/u/17341570?v=4" width="100px;" alt=""/><br /><sub><b>Nikita Nikler</b></sub></a><br /><a href="https://github.com/real-coding/purpur/commits?author=webnikler" title="Documentation">📖</a> <a href="#ideas-webnikler" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-webnikler" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 

@@ -16,6 +16,17 @@
         "review",
         "design"
       ]
+    },
+    {
+      "login": "webnikler",
+      "name": "Nikita Nikler",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/17341570?v=4",
+      "profile": "https://github.com/webnikler",
+      "contributions": [
+        "doc",
+        "ideas",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
