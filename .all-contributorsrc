@@ -1,0 +1,38 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "plxel",
+      "name": "Alexey Mikhaylov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1496959?v=4",
+      "profile": "https://github.com/plxel",
+      "contributions": [
+        "ideas",
+        "maintenance",
+        "review",
+        "design"
+      ]
+    },
+    {
+      "login": "webnikler",
+      "name": "Nikita Nikler",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/17341570?v=4",
+      "profile": "https://github.com/webnikler",
+      "contributions": [
+        "doc",
+        "ideas",
+        "maintenance"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "purpur",
+  "projectOwner": "real-coding",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
