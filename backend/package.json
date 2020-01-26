@@ -20,12 +20,17 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "copy-locales": "cpx \"src/i18n/locales/**/*.json\" \"dist/i18n/locales\"",
-    "watch-locales": "nodemon --watch src -e json --exec yarn copy-locales"
+    "watch-locales": "nodemon --watch src -e json --exec yarn copy-locales",
+    "watch-gql": "ts-node src/generate-typings"
   },
   "dependencies": {
     "@nestjs/common": "^6.7.2",
     "@nestjs/core": "^6.7.2",
+    "@nestjs/graphql": "^6.5.3",
     "@nestjs/platform-express": "^6.7.2",
+    "apollo-server-express": "^2.9.16",
+    "graphql": "^14.5.8",
+    "graphql-tools": "^4.0.6",
     "i18next": "^19.0.3",
     "i18next-express-middleware": "^1.9.1",
     "i18next-node-fs-backend": "^2.1.3",
