@@ -4,9 +4,11 @@ import { AppService } from './app.service';
 import { AppResolver } from './app.resolver';
 
 @Module({
-  imports: [GraphQLModule.forRoot({
-    typePaths: ['./**/*.graphql'],
-  })],
-  providers: [AppService, AppResolver],
+  imports: [
+    GraphQLModule.forRoot({
+      typePaths: ['./**/*.graphql']
+    })
+  ],
+  providers: [AppService, AppResolver]
 })
 export class AppModule {}
