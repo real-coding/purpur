@@ -16,6 +16,5 @@
     "project": "tsconfig.json",
     "tsconfigRootDir": "."
   },
-  "plugins": ["@typescript-eslint", "prettier"],
-  "rules": {}
+  "plugins": ["@typescript-eslint", "prettier"]
 }
