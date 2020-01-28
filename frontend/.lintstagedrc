@@ -1,0 +1,5 @@
+{
+  "linters": {
+    "src/**/*.{ts,tsx}": ["yarn run lint", "git add"]
+  }
+}

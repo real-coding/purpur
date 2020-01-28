@@ -1,5 +1,17 @@
 {
   "name": "purpur",
   "private": true,
-  "workspaces": ["backend", "frontend"]
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lerna run --concurrency 1 --stream precommit"
+    }
+  },
+  "devDependencies": {
+    "husky": "^4.2.1",
+    "lerna": "^3.20.2"
+  }
 }
