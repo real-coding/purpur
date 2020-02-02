@@ -1,0 +1,36 @@
+input SignUpInput {
+  username: String!
+  email: String!
+  password: String!
+}
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
+input PostInput {
+  title: String!
+  body: String
+}
+
+type AuthPayload {
+  id: ID!
+  email: String!
+}
+
+type User {
+  id: ID!
+  email: String!
+  username: String!
+}
+
+type Query {
+  hello: String
+  me: User
+}
+
+type Mutation {
+  signup(signUpInput: SignUpInput): AuthPayload!
+  login(loginInput: LoginInput): AuthPayload!
+}
