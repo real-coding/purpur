@@ -22,7 +22,9 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   }
 
   validate(payload: any) {
-    Logger.log('validate', JSON.stringify(payload));
-    return { userId: payload.sub, username: payload.username };
+    // TODO validate token
+    // if (!valid) throw new UnauthorizedException();
+
+    return payload;
   }
 }

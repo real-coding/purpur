@@ -1,4 +1,3 @@
-import { Logger } from '@nestjs/common';
 import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import cookieParser from 'cookie-parser';
@@ -10,6 +9,5 @@ async function bootstrap() {
   applyI18nmiddleware(app);
   app.use(cookieParser());
   await app.listen(process.env.PORT);
-  Logger.log('test!');
 }
 bootstrap();

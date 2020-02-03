@@ -26,11 +26,9 @@ export class AuthPayload {
 }
 
 export abstract class IMutation {
-  abstract signup(
-    signUpInput?: SignUpInput
-  ): AuthPayload | Promise<AuthPayload>;
+  abstract signup(signUpInput?: SignUpInput): boolean | Promise<boolean>;
 
-  abstract login(loginInput?: LoginInput): AuthPayload | Promise<AuthPayload>;
+  abstract login(loginInput?: LoginInput): boolean | Promise<boolean>;
 }
 
 export abstract class IQuery {

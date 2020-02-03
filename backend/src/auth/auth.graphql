@@ -31,6 +31,6 @@ type Query {
 }
 
 type Mutation {
-  signup(signUpInput: SignUpInput): AuthPayload!
-  login(loginInput: LoginInput): AuthPayload!
+  signup(signUpInput: SignUpInput): Boolean!
+  login(loginInput: LoginInput): Boolean!
 }
