@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from '@apollo/react-hooks';
-import { graphQLUri as uri, routePaths } from './app.config';
-import { BaseLayoutPage, NotFoundPage, SignInPage, SignUpPage } from './pages';
 
-const client = new ApolloClient({ uri });
+import { ApolloProvider } from '@apollo/react-hooks';
+import { routePaths } from './app.config';
+import { BaseLayoutPage, NotFoundPage, SignInPage, SignUpPage } from './pages';
+import { client } from './apollo';
 
 const App: React.FC = () => (
   <ApolloProvider client={client}>
