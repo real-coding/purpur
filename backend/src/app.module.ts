@@ -1,14 +1,27 @@
-import { Module } from '@nestjs/common';
+import { Module, ValidationPipe } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
+import { APP_PIPE } from '@nestjs/core';
 import { AppService } from './app.service';
 import { AppResolver } from './app.resolver';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      typePaths: ['./**/*.graphql']
-    })
+      typePaths: ['./**/*.graphql'],
+      context: ({ req, res }) => ({ req, res })
+    }),
+    AuthModule,
+    UsersModule
   ],
-  providers: [AppService, AppResolver]
+  providers: [
+    {
+      provide: APP_PIPE,
+      useClass: ValidationPipe
+    },
+    AppService,
+    AppResolver
+  ]
 })
 export class AppModule {}

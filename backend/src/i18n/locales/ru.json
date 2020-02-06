@@ -1,3 +1,7 @@
 {
-  "hello": "Привет из ru.json!"
+  "hello": "Привет из ru.json!",
+  "validations": {
+    "is_email": "Неверно введен email",
+    "min_length": "Минимум {{threshold}} символов"
+  }
 }
