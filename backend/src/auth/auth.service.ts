@@ -22,7 +22,7 @@ export class AuthService {
       throw Error('Email or password incorrect');
     }
 
-    return this.jwtService.sign({ id: user.id });
+    return this.jwtService.sign({ id: user._id });
   }
 
   async signUp(signupInput: SignUpInput): Promise<string> {
@@ -35,10 +35,11 @@ export class AuthService {
     const password = await bcryptjs.hash(signupInput.password, 10);
 
     const user = await this.usersService.create({
-      ...signupInput,
+      email: signupInput.email,
+      username: signupInput.username,
       password
     });
 
-    return this.signIn(user);
+    return this.jwtService.sign({ id: user._id });
   }
 }
