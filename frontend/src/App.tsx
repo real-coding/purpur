@@ -10,7 +10,7 @@ const App: React.FC = () => (
   <ApolloProvider client={client}>
     <Router>
       <Switch>
-        <Route exact path={routePaths.BASE}>
+        <Route exact path={routePaths.INDEX}>
           <BaseLayoutPage />
         </Route>
         <Route path={routePaths.SIGN_IN}>
