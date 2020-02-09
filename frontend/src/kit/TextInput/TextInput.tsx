@@ -1,25 +1,18 @@
 import * as React from 'react';
+import { StyledInput } from './styled';
 
 interface TextInputProps {
-  defaultValue?: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   type?: string;
   value: string;
 }
 
 const TextInput: React.FC<TextInputProps> = (props) => {
-  return (
-    <input
-      defaultValue={props.defaultValue}
-      placeholder={props.placeholder}
-      type="text"
-      value={props.value}
-    ></input>
-  );
+  return <StyledInput {...props} />;
 };
 
 TextInput.defaultProps = {
-  defaultValue: '',
   placeholder: '',
   type: 'text'
 };

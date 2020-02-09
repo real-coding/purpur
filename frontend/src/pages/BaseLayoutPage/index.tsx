@@ -5,7 +5,12 @@ export const BaseLayoutPage: React.FC = () => (
   <div>
     Base layout page
     <div>
-      <TextInput value="" defaultValue="" />
+      <TextInput
+        value=""
+        onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+          console.log(e.target.value);
+        }}
+      />
     </div>
   </div>
 );
