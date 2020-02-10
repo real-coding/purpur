@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 /**
- * TODO set correct rem calc: 10px = 1rem
  * TODO move #bababa to theme
  * TODO move border-radius to theme
  * TODO move height to theme
