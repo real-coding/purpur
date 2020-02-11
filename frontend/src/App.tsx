@@ -6,6 +6,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import { routePaths } from './app.config';
 import { BaseLayoutPage, NotFoundPage, SignInPage, SignUpPage } from './pages';
 import { client } from './apollo';
+import Theme from './kit/theme';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -26,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 const App: React.FC = () => (
   <ApolloProvider client={client}>
     <Router>
-      <div>
+      <Theme>
         <GlobalStyle />
         <Switch>
           <Route exact path={routePaths.INDEX}>
@@ -42,7 +43,7 @@ const App: React.FC = () => (
             <NotFoundPage />
           </Route>
         </Switch>
-      </div>
+      </Theme>
     </Router>
   </ApolloProvider>
 );
