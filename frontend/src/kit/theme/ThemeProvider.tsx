@@ -3,7 +3,8 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
 const defaultTheme = {
   colors: {
-    primary: '#C400AB'
+    primary: '#C400AB',
+    border: '#dadada'
   },
   borderRadius: '0.5rem',
   formElementsHeight: '4rem'
