@@ -1,7 +1,7 @@
 import { GqlUser } from './../shared/decorators/decorators';
 import { GqlAuthJwtGuard } from './graphql-auth.guard';
 import { UsersService } from './../users/users.service';
-import { UseGuards } from '@nestjs/common';
+import { UseGuards, Logger } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Args, Mutation, Resolver, Query } from '@nestjs/graphql';
 import { Response } from 'express';
@@ -41,6 +41,6 @@ export class AuthResolver {
   @Query()
   @UseGuards(GqlAuthJwtGuard)
   me(@GqlUser() user: User) {
-    return user;
+    return this.usersService.findById(user.id);
   }
 }

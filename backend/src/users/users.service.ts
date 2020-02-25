@@ -1,44 +1,25 @@
 import { Injectable } from '@nestjs/common';
-
-export type User = any;
+import { InjectModel } from 'nestjs-typegoose';
+import { ReturnModelType } from '@typegoose/typegoose';
+import { User } from './user.model';
 
 @Injectable()
 export class UsersService {
-  private readonly users: User[];
+  constructor(
+    @InjectModel(User) private readonly userModel: ReturnModelType<typeof User>
+  ) {}
 
-  constructor() {
-    this.users = [
-      {
-        userId: 1,
-        username: 'john',
-        password: 'changeme'
-      },
-      {
-        userId: 2,
-        username: 'chris',
-        password: 'secret'
-      },
-      {
-        userId: 3,
-        username: 'maria',
-        password: 'guess'
-      }
-    ];
+  async create(user: any): Promise<User> {
+    return await new this.userModel(user).save();
   }
 
-  async create(user: User): Promise<User> {
-    user.id = this.users[this.users.length - 1].userId + 1;
-    this.users.push(user);
-    return await user;
-  }
-
-  async findById(id: number): Promise<User | undefined> {
-    return await this.users.find((user) => user.userId === id);
+  async findById(id: string): Promise<User | undefined> {
+    return await this.userModel.findById(id);
   }
 
   async findByLoginOrEmail(loginOrEmail: string): Promise<User | undefined> {
-    return await this.users.find(
-      (user) => user.username === loginOrEmail || user.email === loginOrEmail
-    );
+    return await this.userModel.findOne({
+      $or: [{ email: loginOrEmail }, { username: loginOrEmail }]
+    });
   }
 }
