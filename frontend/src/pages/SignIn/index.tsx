@@ -1,3 +1,4 @@
 import React from 'react';
+import { SignInForm } from 'features/Auth';
 
-export const SignIn: React.FC = () => <div>Sign In page</div>;
+export const SignIn: React.FC = () => <SignInForm />;
