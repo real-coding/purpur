@@ -1,3 +1,4 @@
+import { TypegooseModule } from 'nestjs-typegoose';
 import { Module, ValidationPipe } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { APP_PIPE } from '@nestjs/core';
@@ -8,6 +9,7 @@ import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
+    TypegooseModule.forRoot(process.env.DB_URL),
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
       context: ({ req, res }) => ({ req, res })
