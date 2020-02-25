@@ -4,7 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 import { ApolloProvider } from '@apollo/react-hooks';
 import { routePaths } from './app.config';
-import { BaseLayoutPage, NotFoundPage, SignInPage, SignUpPage } from './pages';
+import { BaseLayout, CenteredLayout, NotFound, SignIn, SignUp } from './pages';
 import { client } from './apollo';
 import Theme from './kit/theme';
 
@@ -31,16 +31,19 @@ const App: React.FC = () => (
         <GlobalStyle />
         <Switch>
           <Route exact path={routePaths.INDEX}>
-            <BaseLayoutPage />
+            <BaseLayout />
           </Route>
-          <Route path={routePaths.SIGN_IN}>
-            <SignInPage />
-          </Route>
-          <Route path={routePaths.SIGN_UP}>
-            <SignUpPage />
-          </Route>
+          <CenteredLayout>
+            <Route path={routePaths.SIGN_IN}>
+              <SignIn />
+            </Route>
+            <Route path={routePaths.SIGN_UP}>
+              <SignUp />
+            </Route>
+          </CenteredLayout>
+
           <Route path="*">
-            <NotFoundPage />
+            <NotFound />
           </Route>
         </Switch>
       </Theme>

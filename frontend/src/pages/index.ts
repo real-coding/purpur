@@ -1,4 +1,5 @@
-export { BaseLayoutPage } from './BaseLayoutPage';
-export { SignInPage } from './SignInPage';
-export { SignUpPage } from './SignUpPage';
-export { NotFoundPage } from './NotFoundPage';
+export { BaseLayout } from './BaseLayout';
+export { CenteredLayout } from './CenteredLayout';
+export { SignIn } from './SignIn';
+export { SignUp } from './SignUp';
+export { NotFound } from './NotFound';
